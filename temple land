@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    lens = int(input())  
+    arrs = [int(x) for x in input().split()]  
+    if lens % 2 == 0:
+        answer = "no"
+    else:
+        mid = lens // 2 + 1
+        
+        should_be = list(range(1, mid)) + [mid] + list(range(mid - 1, 0, -1))
+        #print(should_be)
+        answer = "yes" if should_be == arrs else "no"
+    print(answer)    
